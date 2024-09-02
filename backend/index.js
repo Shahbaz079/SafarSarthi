@@ -46,8 +46,8 @@ app.use("/payUploads",express.static(path.join(__dirname+"/payuploads")));
 
  
 app.get("/", (req, res) => { 
-  app.use(express.static(path.resolve(__dirname, "frontend", "build"))); 
-  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html")); 
+  app.use(express.static(path.resolve(__dirname,"backend", "frontend", "dist"))); 
+  res.sendFile(path.resolve(__dirname, "backend","frontend", "dist", "index.html")); 
 }); 
 
 app.listen(port,console.log(`Server running on port:${port}`));
