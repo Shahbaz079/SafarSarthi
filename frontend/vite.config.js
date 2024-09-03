@@ -8,9 +8,9 @@ export default defineConfig({
   server:{
 
     proxy:{
-     "/api/":"http://localhost:5000",
-     "/uploads/":"http://localhost:5000",
-     "/payUploads/":"http://localhost:5000"
+     "/api/":"https://safarsarthi-backend.onrender.com/",
+     "/uploads/":"https://safarsarthi-backend.onrender.com/",
+     "/payUploads/":"https://safarsarthi-backend.onrender.com/"
     },
   },
 })
