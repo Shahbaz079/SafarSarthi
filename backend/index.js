@@ -10,6 +10,7 @@ import http from 'http';
 import uploadRoutes from "./routes/uploadRoutes.js"
 import orderRoutes from "./routes/orderRoutes.js"
 import payUploadRoutes from "./routes/payUploadRoutes.js"
+import cors from 'cors'
 //import utils
 
 
@@ -22,7 +23,7 @@ const HOST = process.env.HOST || '0.0.0.0';
 connectDB()
 
 const app=express();
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
