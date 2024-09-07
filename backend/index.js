@@ -16,7 +16,7 @@ import payUploadRoutes from "./routes/payUploadRoutes.js"
 import connectDB from "./config/db.js"
 
 dotenv.config();
-const port=process.env.PORT||5000;
+const port=process.env.PORT||10000;
 
 connectDB()
 
