@@ -17,6 +17,7 @@ import connectDB from "./config/db.js"
 
 dotenv.config();
 const port=process.env.PORT||10000;
+const HOST = process.env.HOST || '0.0.0.0';
 
 connectDB()
 
@@ -47,4 +48,4 @@ app.use("/payUploads",express.static(path.join(__dirname+"/payuploads")));
  
 
 
-app.listen(port,console.log(`Server running on port:${port}`));
+app.listen(port,HOST,console.log(`Server running on port:${port},host:${HOST}`));
