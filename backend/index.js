@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser"
 import userRoutes from "./routes/userRoutes.js"
 import categoryRoutes from "./routes/categoryRoutes.js"
 import productRoutes from "./routes/productRoutes.js"
-
+import http from 'http';
 import uploadRoutes from "./routes/uploadRoutes.js"
 import orderRoutes from "./routes/orderRoutes.js"
 import payUploadRoutes from "./routes/payUploadRoutes.js"
@@ -45,7 +45,9 @@ const __dirname=path.resolve();
 app.use("/uploads",express.static(path.join(__dirname+"/uploads")));
 app.use("/payUploads",express.static(path.join(__dirname+"/payuploads")));
 
- app.keepAliveTimeout=12000;
- app.headersTimeout = 12000;
+const server = http.createServer(app);
+server.keepAliveTimeout = 120000; // 120 seconds
+server.headersTimeout = 120000; // 120 seconds
+
 
 app.listen(port,HOST,console.log(`Server running on port:${port},host:${HOST}`));
