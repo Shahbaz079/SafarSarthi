@@ -60,8 +60,8 @@ const uplaodFileHandler=async (e)=>{
 try {
   const result=await uploadProductImage(formData).unwrap()
   toast.success(result.message)
-  setImage(result.image);
-  setImageUrl(result.image)
+  setImage(`https://safarsarthi-backendserve.onrender.com/${result.image}`);
+  setImageUrl(`https://safarsarthi-backendserve.onrender.com/${result.image}`)
 } catch (error) {
   toast.error(error?.data?.message|| error.error)
 }
