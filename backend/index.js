@@ -45,7 +45,7 @@ const __dirname=path.resolve();
 app.use("/uploads",express.static(path.join(__dirname+"/uploads")));
 app.use("/payUploads",express.static(path.join(__dirname+"/payuploads")));
 
- 
-
+ app.keepAliveTimeout=12000;
+ app.headersTimeout = 12000;
 
 app.listen(port,HOST,console.log(`Server running on port:${port},host:${HOST}`));
