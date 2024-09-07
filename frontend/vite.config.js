@@ -7,10 +7,6 @@ export default defineConfig({
 
   server:{
 
-    proxy:{
-     "/api/":"https://safarsarthi-backendserve.onrender.com/",
-     "/uploads/":"https://safarsarthi-backendserve.onrender.com/",
-     "/payUploads/":"https://safarsarthi-backendserve.onrender.com/"
-    },
+   
   },
 })
